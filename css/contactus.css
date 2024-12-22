@@ -1,0 +1,496 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: white;
+  font-size: 36px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0b4e5d;
+}
+
+nav a {
+  margin-left: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header Section */
+.contact-header {
+  margin-top: -80px;
+  background-image: url('https://aguacatec.es/wp-content/uploads/2023/10/e5a978b8-6772-4c85-a50e-15581af7d483.png');
+  background-color: #04414b;
+  padding: 150px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .contact-header {
+    padding: 100px;
+  }
+}
+
+
+
+/* Estilo del botón */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: #007BFF;
+  /* Azul */
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 10px;
+  /* Centra el texto verticalmente */
+  cursor: pointer;
+  display: none;
+  /* Oculto por defecto */
+  transition: opacity 0.3s, transform 0.3s ease;
+  border-radius: 100%;
+  /* Sin bordes redondeados */
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
+  /* Azul más oscuro al pasar el mouse */
+  transform: scale(1.1);
+  /* Aumenta ligeramente el tamaño del botón */
+}
+
+@media (max-width: 768px) {
+  #scrollToTopBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+
+
+
+/* Estilo para el menu */
+header {
+  width: 100%;
+}
+
+.menu-bar {
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-top: 50px solid #234380;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  padding: 10px 0;
+}
+
+.menu-bar nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #89b2ce;
+  border-bottom: 2px solid #89b2ce;
+}
+
+.nav-links .logo img {
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+}
+
+/* Estilos específicos para el número de teléfono */
+.phone-number a {
+  font-size: 17px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column; 
+  align-items: center; 
+  cursor: pointer;
+  padding: 0px;
+}
+
+.menu-toggle .bar {
+  height: 3px; 
+  width: 25px; 
+  background-color: #333; 
+  margin: 3px 0; 
+  transition: all 0.3s ease; 
+}
+
+.menu-toggle img {
+  height: 35px;
+  margin-top: 10px;
+}
+
+.responsive-logo {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .responsive-logo {
+    display: inline-block;
+    width: 100px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 5;
+    justify-content: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links .logo img {
+    display: none;
+  }
+
+  .nav-links li a:hover {
+    border-bottom: none;
+  }
+}
+
+/* Formulario */
+.form-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.form-section, .info-section {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border: 1px solid #ddd;
+}
+
+.form-section {
+  flex: 2;
+}
+
+.info-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+h1, h2 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  background-color: #002e5d;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #001f40;
+}
+
+.checkbox-group {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 50px;
+}
+
+.checkbox-group div {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.checkbox-group input {
+  margin-top: 4px;
+}
+
+.checkbox-group label {
+  flex-grow: 1;
+}
+
+.info-section div {
+  background-color: #f0f7ff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-section div p {
+  font-size: 14px;
+}
+
+.info-section a {
+  color: #002e5d;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.info-section a:hover {
+  text-decoration: underline;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.services a {
+  flex: 1 1 calc(50% - 10px);
+  text-align: left;
+}
+
+.recaptcha {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.header-text {
+  background-color: #002e5d;
+  color: white;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .services a {
+    flex: 1 1 100%;
+  }
+
+  .checkbox-group {
+    grid-template-columns: repeat(2, 100px);
+    gap: 50px;
+  }
+}
+
+/*CSS del footer*/
+
+.footer {
+  background-color: #132130;
+  color: #ffffff;
+  padding: 60px 0 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 15px 30px 15px; /* Ajuste para más espacio entre columnas */
+}
+
+.footer-section iframe{
+  margin-left: -120px; 
+}
+.footer-logo {
+  font-size: 36px; /* Aumentado el tamaño de la fuente */
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.footer-logo span {
+  color: #00cccc;
+}
+
+.footer-section h4 {
+  font-size: 20px; /* Aumentado el tamaño de la fuente */
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.footer-section p, .footer-section a {
+  font-size: 16px; /* Aumentado el tamaño de la fuente */
+  color: #ffffff;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 38px;
+  margin-right: 10px;
+  color: #ffffff;
+  transition: all 0.3s;
+  overflow: hidden; /* Para asegurar que la imagen no se salga del borde circular */
+}
+
+.social-icon:hover {
+  background-color: #ffffff;
+  color: #003366;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Para que las imágenes se adapten al círculo sin distorsión */
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+
+.footer-bottom {
+  background-color: #010a13;
+  padding: 20px 0; /* Aumentado el padding para bajar el texto */
+  text-align: center;
+  margin-top: 30px; /* Espacio extra para separar las secciones */
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 16px; /* Aumentado el tamaño de la fuente */
+  color: #ffffff;
+}
+
+.footer-bottom a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 0 0 30px 0;
+  }
+}
